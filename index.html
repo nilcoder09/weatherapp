@@ -18,13 +18,13 @@
                 <h2 class="city">Dallas</h2>
                 <div class="details">
                     <div class="col">
-                        <img arc="rain.jpeg" alt="image">
+                        <!-- <img src="rain.jpeg" alt="image"> -->
                         <div>
                             <p class="humidity">50%</p>
                             <p>Humidity</p>
                         </div>
-                        <div class="col">
-                            <img arc="" alt="image">
+                        <div class="col1">
+                            <!-- <img src="wind.jpeg" alt="image"> -->
                             <div>
                                 <p class="wind">15 miles/hr</p>
                                 <p>wind speed</p>
@@ -33,5 +33,15 @@
                 </div>
             </div>
         </div>
+        <script src="script.js">
+            const apikey="";
+            const apiurl="";
+            async function checkweather(){
+                const response = await fetch(apiurl+`$appid=${apikey}`);
+                var data = await response.json();
+                console.log(data);
+            }
+            checkweather();
+        </script>
     </body>
 </html>
